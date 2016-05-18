@@ -1,0 +1,29 @@
+{
+  "name": "consultas-medicas.git",
+  "homepage": "https://github.com/gomes-fdr/consultas-medicas",
+  "authors": [
+    "Fabiano da Rosa Gomes"
+  ],
+  "description": "Projeto da disciplica de programação para intermet 2",
+  "main": "index.html",
+  "keywords": [
+    "consultas",
+    "marcação",
+    "médicos"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "^1.1.6",
+    "skeleton": "^2.0.4",
+    "vue": "^1.0.21",
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
+  }
+}
