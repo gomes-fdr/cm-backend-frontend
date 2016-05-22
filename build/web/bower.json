@@ -15,7 +15,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "lib/components",
     "test",
     "tests"
   ],
@@ -24,6 +24,8 @@
     "skeleton": "^2.0.4",
     "vue": "^1.0.21",
     "angular": "^1.5.3",
-    "angular-route": "^1.5.3"
+    "angular-route": "^1.5.3",
+    "ng-mask": "*",
+    "moment": "^2.13.0"
   }
 }

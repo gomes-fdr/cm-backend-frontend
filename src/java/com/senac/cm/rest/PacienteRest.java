@@ -77,6 +77,21 @@ public class PacienteRest extends CrudGenericoRest<Paciente>{
             return exceptionParaResponse(e);
         }
     }
+    
+//    @POST
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Response save(String wo){
+//        if(wo == null){
+//            System.out.println("Could nor persist work- null");
+//            return Response.noContent().build();
+//        } else{
+//            Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HHmm:ssZ").create();
+//            WorkDto dto = gson.fromJson(wo, WorkDto.class);
+//            Work workDao = WorkTransformator.transform(dto);
+//            workDao.persist();
+//            return Response.ok().build();
+//        }
+//    }
 
     @Override
     protected Response gerarResponseParaCollection(List<Paciente> obj) {

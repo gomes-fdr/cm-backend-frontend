@@ -1,0 +1,61 @@
+<div class='row'>
+  <div class='six columns'>
+    <h4>Lista de pacientes</h4>
+  </div>
+</div>
+
+<form>
+  <div class='row'>
+    <div class='six columns'>
+      <input class="u-full-width" type="text" placeholder="Nome do paciente" id="nomePaciente" ng-model="pesquisa">
+    </div>
+    <div class='six columns'>
+      <a class="button button-primary" href="#/paciente-novo">Novo</a>
+    </div>
+  </div>
+</form>
+
+<table class="u-full-width" ng-init="todos()" ng-hide="editarRegistro">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Data Nascimento</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="p in listaPacientes | filter:pesquisa">
+      <td>{{p.cpf}}</td>
+      <td>{{p.nome}}</td>
+      <td>{{p.dt_nascimento}}</td>
+      <td>
+        <a class="button" href="" ng-click="editar(p)">Editar</a>
+        <a class="button" href="#" ng-click="excluir(p)">Excluir</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div id='edicao' ng-show="editarRegistro">
+  <div class='row'>
+    <div class='six columns'>
+      <h4>Editar paciente</h4>
+    </div>
+  </div>
+
+<form>
+  <div class='row'>
+    <div class='six columns'>
+      <label for="nomePaciente">Nome</label>
+          <input class="u-full-width" type="text" placeholder="Nome do paciente" id="nomePaciente" ng-model="paciente.nome">
+    </div>
+    <div class='six columns'>
+      <label for="dtPaciente">Data de nascimento</label>
+          <input class="u-full-width" type="text" placeholder="dd-mm-aaaa" id="dtPaciente" ng-model="paciente.dt_nascimento" data-ng-mask="##-##-####" data-on="keyup">
+    </div>
+  </div>
+  <a class="button" ng-click="salvarEdicao(paciente)">Salvar</a>
+  <a class="button" ng-click="cancelarEdicao()">Cancelar</a>
+</form>
+</div>

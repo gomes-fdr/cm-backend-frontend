@@ -1,0 +1,20 @@
+<div class='row'>
+  <div class='six columns'>
+    <h4>Novo paciente</h4>
+  </div>
+</div>
+
+<form>
+	<div class='row'>
+		<div class='six columns'>
+			<label for="nomePaciente">Nome</label>
+      		<input class="u-full-width" type="text" placeholder="Nome do paciente" id="nomePaciente" ng-model="paciente.nome">
+		</div>
+		<div class='six columns'>
+			<label for="dtPaciente">Data de nascimento</label>
+      		<input class="u-full-width" type="text" placeholder="dd-mm-aaaa" id="dtPaciente" ng-model="paciente.data" data-ng-mask="##-##-####" data-on="keyup">
+		</div>
+	</div>
+	<a class="button" ng-click="salvar()">Salvar</a>
+    <a class="button" href="#/paciente-lista">Cancelar</a>
+</form>
